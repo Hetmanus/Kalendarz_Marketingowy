@@ -13,5 +13,7 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('/calendar', 'ObserverController@index');
+Route::get('/calendar/{flag}', 'ObserverController@index')
+-> where(['flag' => '[0-9]+']);
 Route::get('/spec/addAction', 'SpecialistController@addAction');
 
